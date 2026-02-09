@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background: #050505;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calc-container {
+    background: #111;
+    padding: 30px;
+    border-radius: 40px;
+    border: 2px solid #0ff;
+    box-shadow: 0 0 20px #0ff, inset 0 0 10px #0ff;
+    width: 350px;
+}
+
+.screen-area {
+    background: #000;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #f0f;
+    text-align: right;
+    box-shadow: 0 0 10px #f0f;
+}
+
+#result {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #0ff;
+    font-size: 2rem;
+    text-align: right;
+    outline: none;
+    text-shadow: 0 0 5px #0ff;
+}
+
+#prev-op {
+    color: #f0f;
+    font-size: 0.8rem;
+    height: 1rem;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.btn {
+    height: 60px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    background: #1a1a1a;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0ff;
+    color: #000;
+    box-shadow: 0 0 15px #0ff;
+}
+
+.opt { color: #f0f; border-color: #f0f; }
+.opt:hover { background: #f0f; box-shadow: 0 0 15px #f0f; }
+
+.equal {
+    grid-row: span 2;
+    height: 135px;
+    background: linear-gradient(to bottom, #0ff, #f0f);
+    border: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.zero { grid-column: span 2; }
